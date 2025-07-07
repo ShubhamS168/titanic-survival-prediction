@@ -90,9 +90,8 @@ with col2:
 st.markdown("---")
 st.markdown("## 📈 Performance Analysis")
 
-tab1, tab2, tab3, tab4 = st.tabs([
-    "🎯 Accuracy Analysis", 
-    "📊 Feature Importance", 
+tab1, tab3, tab4 = st.tabs([
+    "🎯 Accuracy Analysis",
     "🔍 Model Comparison",
     "📚 Model Explanation"
 ])
