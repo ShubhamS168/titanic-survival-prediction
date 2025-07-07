@@ -1,0 +1,45 @@
+{
+  "model_name": "LogisticRegression",
+  "test_accuracy": 0.8212290502793296,
+  "cv_mean": 0.7597951344430217,
+  "cv_std": 0.019431000100163753,
+  "training_date": "2025-07-07T09:05:47.841392",
+  "feature_count": 12,
+  "training_samples": 712,
+  "features_used": [
+    "Pclass",
+    "Sex",
+    "Age",
+    "Fare",
+    "Embarked",
+    "Title",
+    "FamilySize",
+    "IsAlone",
+    "FarePerPerson",
+    "CabinLetter",
+    "HasCabin",
+    "IsChild"
+  ],
+  "all_results": [
+    {
+      "model_name": "RandomForest",
+      "test_accuracy": 0.8100558659217877,
+      "cv_mean": 0.7471289274106175,
+      "cv_std": 0.029641491411671564
+    },
+    {
+      "model_name": "XGBoost",
+      "test_accuracy": 0.8156424581005587,
+      "cv_mean": 0.734521816211957,
+      "cv_std": 0.016119988747800403
+    },
+    {
+      "model_name": "LogisticRegression",
+      "test_accuracy": 0.8212290502793296,
+      "cv_mean": 0.7597951344430217,
+      "cv_std": 0.019431000100163753
+    }
+  ],
+  "target_achieved": true,
+  "version": "2.1_fixed"
+}
