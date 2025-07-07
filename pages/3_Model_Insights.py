@@ -90,12 +90,18 @@ with col2:
 st.markdown("---")
 st.markdown("## 📈 Performance Analysis")
 
-tab1, tab2, tab3, tab4 = st.tabs([
+tab1, tab3, tab4 = st.tabs([
     "🎯 Accuracy Analysis", 
     "📊 Feature Importance", 
     "🔍 Model Comparison",
     "📚 Model Explanation"
 ])
+# tab1, tab2,tab3, tab4 = st.tabs([
+#     "🎯 Accuracy Analysis", 
+#     "📊 Feature Importance", 
+#     "🔍 Model Comparison",
+#     "📚 Model Explanation"
+# ])
 
 with tab1:
     col1, col2 = st.columns(2)
@@ -144,91 +150,91 @@ with tab1:
         fig.update_layout(height=400)
         st.plotly_chart(fig, use_container_width=True)
 
-with tab2:
-    st.markdown("### 🎯 Feature Importance Analysis")
+# with tab2:
+#     st.markdown("### 🎯 Feature Importance Analysis")
     
-    try:
-        if hasattr(model.named_steps['classifier'], 'feature_importances_'):
-            importances = model.named_steps['classifier'].feature_importances_
-            feature_names_processed = model.named_steps['preprocessor'].get_feature_names_out()
+#     try:
+#         if hasattr(model.named_steps['classifier'], 'feature_importances_'):
+#             importances = model.named_steps['classifier'].feature_importances_
+#             feature_names_processed = model.named_steps['preprocessor'].get_feature_names_out()
             
-            # Create feature importance dataframe
-            importance_df = pd.DataFrame({
-                'feature': feature_names_processed,
-                'importance': importances
-            }).sort_values('importance', ascending=False)
+#             # Create feature importance dataframe
+#             importance_df = pd.DataFrame({
+#                 'feature': feature_names_processed,
+#                 'importance': importances
+#             }).sort_values('importance', ascending=False)
             
-            # Display top features
-            col1, col2 = st.columns([2, 1])
+#             # Display top features
+#             col1, col2 = st.columns([2, 1])
             
-            with col1:
-                # Top 15 features chart
-                top_features = importance_df.head(15)
-                fig = px.bar(
-                    top_features,
-                    x='importance',
-                    y='feature',
-                    orientation='h',
-                    title="Top 15 Most Important Features",
-                    color='importance',
-                    color_continuous_scale='viridis'
-                )
-                fig.update_layout(
-                    height=600,
-                    yaxis={'categoryorder':'total ascending'}
-                )
-                st.plotly_chart(fig, use_container_width=True)
+#             with col1:
+#                 # Top 15 features chart
+#                 top_features = importance_df.head(15)
+#                 fig = px.bar(
+#                     top_features,
+#                     x='importance',
+#                     y='feature',
+#                     orientation='h',
+#                     title="Top 15 Most Important Features",
+#                     color='importance',
+#                     color_continuous_scale='viridis'
+#                 )
+#                 fig.update_layout(
+#                     height=600,
+#                     yaxis={'categoryorder':'total ascending'}
+#                 )
+#                 st.plotly_chart(fig, use_container_width=True)
             
-            with col2:
-                st.markdown("#### 🔍 Feature Categories")
+#             with col2:
+#                 st.markdown("#### 🔍 Feature Categories")
                 
-                # Categorize features
-                categories = {
-                    'Demographics': 0,
-                    'Economic': 0,
-                    'Family': 0,
-                    'Location': 0,
-                    'Other': 0
-                }
+#                 # Categorize features
+#                 categories = {
+#                     'Demographics': 0,
+#                     'Economic': 0,
+#                     'Family': 0,
+#                     'Location': 0,
+#                     'Other': 0
+#                 }
                 
-                for _, row in importance_df.head(15).iterrows():
-                    feature = row['feature']
-                    importance = row['importance']
+#                 for _, row in importance_df.head(15).iterrows():
+#                     feature = row['feature']
+#                     importance = row['importance']
                     
-                    if any(x in feature.lower() for x in ['sex', 'age', 'title']):
-                        categories['Demographics'] += importance
-                    elif any(x in feature.lower() for x in ['fare', 'class', 'pclass']):
-                        categories['Economic'] += importance
-                    elif any(x in feature.lower() for x in ['family', 'sibsp', 'parch']):
-                        categories['Family'] += importance
-                    elif any(x in feature.lower() for x in ['cabin', 'embarked']):
-                        categories['Location'] += importance
-                    else:
-                        categories['Other'] += importance
+#                     if any(x in feature.lower() for x in ['sex', 'age', 'title']):
+#                         categories['Demographics'] += importance
+#                     elif any(x in feature.lower() for x in ['fare', 'class', 'pclass']):
+#                         categories['Economic'] += importance
+#                     elif any(x in feature.lower() for x in ['family', 'sibsp', 'parch']):
+#                         categories['Family'] += importance
+#                     elif any(x in feature.lower() for x in ['cabin', 'embarked']):
+#                         categories['Location'] += importance
+#                     else:
+#                         categories['Other'] += importance
                 
-                # Display category breakdown
-                category_df = pd.DataFrame(list(categories.items()), 
-                                         columns=['Category', 'Importance'])
+#                 # Display category breakdown
+#                 category_df = pd.DataFrame(list(categories.items()), 
+#                                          columns=['Category', 'Importance'])
                 
-                fig = px.pie(
-                    category_df,
-                    values='Importance',
-                    names='Category',
-                    title="Feature Importance by Category"
-                )
-                st.plotly_chart(fig, use_container_width=True)
+#                 fig = px.pie(
+#                     category_df,
+#                     values='Importance',
+#                     names='Category',
+#                     title="Feature Importance by Category"
+#                 )
+#                 st.plotly_chart(fig, use_container_width=True)
                 
-                # Top features table
-                st.markdown("#### 🏆 Top 10 Features")
-                display_df = importance_df.head(10)[['feature', 'importance']].round(4)
-                display_df.columns = ['Feature', 'Importance']
-                st.dataframe(display_df, use_container_width=True, hide_index=True)
+#                 # Top features table
+#                 st.markdown("#### 🏆 Top 10 Features")
+#                 display_df = importance_df.head(10)[['feature', 'importance']].round(4)
+#                 display_df.columns = ['Feature', 'Importance']
+#                 st.dataframe(display_df, use_container_width=True, hide_index=True)
         
-        else:
-            st.info("Feature importance analysis not available for this model type.")
+#         else:
+#             st.info("Feature importance analysis not available for this model type.")
     
-    except Exception as e:
-        st.error(f"Error analyzing feature importance: {str(e)}")
+#     except Exception as e:
+#         st.error(f"Error analyzing feature importance: {str(e)}")
 
 with tab3:
     st.markdown("### 🔍 Model Comparison Details")
