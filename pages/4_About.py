@@ -357,7 +357,7 @@ with col1:
     st.markdown("""
     ### 📚 Documentation
 
-    - [**User Guide**](docs/user_guide.md) – Complete usage instructions
+    - [**User Guide**](https://github.com/ShubhamS168/titanic-survival-prediction/blob/main/docs/user_guide.md) – Complete usage instructions
     - [**API Docs**](docs/api_docs.md) – REST API interface
     - [**Model Cards**](docs/model_cards.md) – Details of trained models
     - [**Deployment Guide**](docs/deployment_guide.md) – Setup guide
