@@ -358,9 +358,9 @@ with col1:
     ### 📚 Documentation
 
     - [**User Guide**](https://github.com/ShubhamS168/titanic-survival-prediction/blob/main/docs/user_guide.md) – Complete usage instructions
-    - [**API Docs**](docs/api_docs.md) – REST API interface
-    - [**Model Cards**](docs/model_cards.md) – Details of trained models
-    - [**Deployment Guide**](docs/deployment_guide.md) – Setup guide
+    - [**API Docs**](https://github.com/ShubhamS168/titanic-survival-prediction/blob/main/docs/api_docs.md) – REST API interface
+    - [**Model Cards**](https://github.com/ShubhamS168/titanic-survival-prediction/blob/main/docs/model_cards.md) – Details of trained models
+    - [**Deployment Guide**](https://github.com/ShubhamS168/titanic-survival-prediction/blob/main/docs/deployment_guide.md) – Setup guide
     """)
 
 with col2:
@@ -368,9 +368,9 @@ with col2:
     ### 🔗 Resources
 
     - [**GitHub Repository**](https://github.com/ShubhamS168/Celebal-CSI-Data-Science/tree/main) – Source & issues
-    - [**Model Registry**](docs/model_registry.md) – Tracked model files
-    - [**Monitoring Dashboard**](docs/monitoring_dashboard.md) – Performance metrics
-    - [**Knowledge Base**](docs/knowledge_base.md) – FAQs & solutions
+    - [**Model Registry**](https://github.com/ShubhamS168/titanic-survival-prediction/blob/main/docs/model_registry.md) – Tracked model files
+    - [**Monitoring Dashboard**](https://github.com/ShubhamS168/titanic-survival-prediction/blob/main/docs/monitoring_dashboard.md) – Performance metrics
+    - [**Knowledge Base**](https://github.com/ShubhamS168/titanic-survival-prediction/blob/main/docs/knowledge_base.md) – FAQs & solutions
     """)
 
 
