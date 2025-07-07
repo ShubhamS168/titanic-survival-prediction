@@ -37,6 +37,7 @@ titanic-survival-prediction/
 ├── assets/                       # screenshots and graphs
 │    ├── about.png
 │    ├── homepage.png
+│    ├── top10_most_imp_features.png
 │    ├── model_accuracy_context.png
 │    ├── model_insights.png
 │    ├── model_perf_comparison.png
@@ -184,31 +185,34 @@ streamlit run app.py
 
 ![Homepage Screenshot](assets/homepage.png)
 *Figure 1: Home page*
-
+---
 ![Prediction Page](assets/prediction.png)
 *Figure 2: Real-time prediction page where users input passenger details*
-
+---
 ![Model Insights](assets/model_insights.png)
 *Figure 3: Model Insights page*
-
+---
 ![Model Insights](assets/about.png)
 *Figure 4: Screenshot of the About page*
-
+---
 ![Model Insights](assets/prediction_result.png)
 *Figure 5: Showing prediction result - page after user prediction*
-
-![Model Insights](assets/model_perf_comparison.png)
-*Figure 6: Comparison of multiple model performances*
-
-![Model Insights](assets/model_test_accruracy.png)
-*Figure 7: Showing test_accuracy of each model*
-
+---
+![Model Insights](assets/top10_most_imp_features.png)
+*Figure 6: Top features which influenced prediction*
+---
+![Model Insights](assets/model_perf_comparison.png)                                                                             
+*Figure 7: Comparison of multiple model performances*
+---
+![Model Insights](assets/model_test_accruracy.png)  
+*Figure 8: Showing test_accuracy of each model*
+---
 ![Model Insights](assets/model_accuracy_context.png)
-*Figure 8: Visual context around model accuracy*
-
+*Figure 9: Visual context around model accuracy*
+---
 ![Model Insights](assets/performance_analysis.png)
-*Figure 9: showing performance analysis expectations table*
-
+*Figure 10: showing performance analysis expectations **accuracy vs characteristics** table*
+---
 
 ---
 
@@ -240,17 +244,6 @@ streamlit run app.py
 
 
 ---
-
-## 📬 Contact
-
-For any queries, feedback, or collaboration, feel free to connect:
-
-📧 **Email:** [shubhamsourav475@gmail.com](mailto:shubhamsourav475@gmail.com)
-
----
-
-> 📝 **Note:**  
-> This repository is maintained as part of the CSI (Celebal Summer Internship) program and is intended for educational use.
 
 
 ## 📚 Project Goal Reminder
